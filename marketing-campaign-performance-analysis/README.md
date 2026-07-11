@@ -100,5 +100,3 @@ https://datastudio.google.com/reporting/06564fe0-c7f3-4165-a80c-fb1ce2cc771f
 ## 👩‍💻 Author
 
 **Gizem Kocaöz Acar**
-
-Junior Data Analyst Portfolio
