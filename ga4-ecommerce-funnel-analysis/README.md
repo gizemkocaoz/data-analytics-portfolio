@@ -4,21 +4,24 @@
 
 This project analyzes the Google Analytics 4 (GA4) Sample E-commerce dataset using BigQuery.
 
-The objective is to explore user behavior throughout the e-commerce funnel by extracting event-level data, identifying traffic sources, and measuring conversion performance from sessions to purchases.
+The objective is to explore user behavior throughout the e-commerce funnel by extracting event-level data, identifying traffic sources, and measuring conversion performance from user sessions to purchases.
 
 ---
 
 ## 🛠 Technologies
 
-- BigQuery
-- SQL (Google Standard SQL)
-- Google Analytics 4 (GA4)
+<p align="left">
+  <img src="https://img.shields.io/badge/Google%20BigQuery-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google%20Analytics%204-E37400?style=for-the-badge&logo=googleanalytics&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</p>
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 ga4-ecommerce-funnel-analysis/
 │
 ├── README.md
@@ -34,7 +37,7 @@ ga4-ecommerce-funnel-analysis/
 
 ## 📄 SQL Files
 
-### 📌 01_extract_events.sql
+### 01_extract_events.sql
 
 Extracts event-level data from the GA4 Sample E-commerce dataset, including:
 
@@ -48,7 +51,7 @@ Extracts event-level data from the GA4 Sample E-commerce dataset, including:
 - Medium
 - Campaign
 
-### 📌 02_funnel_analysis.sql
+### 02_funnel_analysis.sql
 
 Builds a conversion funnel by aggregating GA4 events and calculating:
 
@@ -72,7 +75,7 @@ Results are grouped by:
 
 ![Event Extraction](images/extract_events_result.png)
 
-This query extracts event-level data from the GA4 e-commerce dataset, including session information, traffic source, campaign, country, and device category.
+This query extracts event-level GA4 data, including session details, user identifiers, traffic sources, campaign information, country, and device category.
 
 ---
 
@@ -80,17 +83,17 @@ This query extracts event-level data from the GA4 e-commerce dataset, including 
 
 ![Funnel Analysis](images/funnel_analysis_result.png)
 
-This query aggregates GA4 events to measure user sessions and conversion funnel performance across traffic sources and campaigns.
+This query aggregates GA4 events to measure user sessions and conversion funnel performance across different traffic sources and campaigns.
 
 ---
 
 ## 🎯 Key Skills Demonstrated
 
 - Google BigQuery
+- SQL (Google Standard SQL)
 - Google Analytics 4 (GA4)
-- SQL
-- Event-level data analysis
-- Funnel analysis
-- Traffic source analysis
-- Session analysis
-- Data aggregation
+- Event-Level Data Analysis
+- E-commerce Funnel Analysis
+- Session & Traffic Source Analysis
+- Data Aggregation
+- Conversion Metrics
