@@ -104,3 +104,9 @@ It can be downloaded from the official Stack Overflow Developer Survey repositor
 - Data Filtering
 - Data Aggregation
 - Pandas Data Manipulation
+
+👩‍💻 Author
+
+Gizem Kocaöz Acar
+
+Junior Data Analyst Portfolio
