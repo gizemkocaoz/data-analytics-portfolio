@@ -1,40 +1,26 @@
-![Python](https://img.shields.io/badge/Python-Data_Analysis-3776AB?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge)
-
 # Python Data Analysis & Visualization
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
 ## 📖 Project Overview
 
-This project explores the Stack Overflow Developer Survey dataset using Python and Pandas.
+This project analyzes the Stack Overflow Developer Survey dataset using Python and Pandas.
 
-The analysis focuses on data exploration, cleaning, transformation, and statistical analysis to identify developer trends, programming language popularity, work experience, and learning resources.
-
----
-
-## 🎯 Business Objective
-
-The analysis aims to answer the following questions:
-
-- Which programming languages are most commonly used?
-- What percentage of developers use Python?
-- How many developers learned programming through online courses?
-- What does the distribution of work experience look like?
-- How can missing values be identified and handled using Pandas?
+The notebook demonstrates data exploration, data cleaning, descriptive statistics, filtering, and exploratory data analysis (EDA) on a real-world survey dataset.
 
 ---
 
 ## 🛠 Technologies
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Jupyter Notebook](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+- Python
+- Pandas
+- Jupyter Notebook
 
 ---
 
-## 📂 Project Structure
+## 📂 Repository Structure
 
 ```text
 python-data-analysis-visualization/
@@ -43,91 +29,57 @@ python-data-analysis-visualization/
 ├── notebook/
 │   └── stackoverflow_survey_analysis.ipynb
 ├── dataset/
+│   └── README.md
 └── images/
+    ├── dataframe_preview.png
+    ├── dataframe_info.png
+    ├── missing_values.png
+    ├── python_usage_analysis.png
+    ├── learning_resources_analysis.png
+    └── education_analysis.png
 ```
 
 ---
 
-## 📊 Dataset
+## 📸 Dataset Preview
 
-**Source**
-
-Stack Overflow Developer Survey Dataset
-
-The dataset contains responses from thousands of software developers worldwide, including information about:
-
-- Programming languages
-- Work experience
-- Learning resources
-- Education
-- Employment
-- Developer tools and technologies
+![Dataset Preview](images/dataframe_preview.png)
 
 ---
 
-## 📓 Jupyter Notebook
+## 📸 Dataset Information
 
-The notebook demonstrates a complete exploratory data analysis (EDA) workflow using Pandas.
-
-Main tasks include:
-
-- Loading and inspecting datasets
-- Data cleaning
-- Handling missing values
-- Filtering and selecting data
-- Aggregation and descriptive statistics
-- Working with categorical variables
-- Data exploration using Pandas
+![Dataset Information](images/dataframe_info.png)
 
 ---
 
-## 📈 Analysis Highlights
+## 📸 Missing Value Analysis
 
-The notebook includes analyses such as:
-
-- Python usage among developers
-- Most popular programming languages
-- Developers' work experience distribution
-- Learning resource preferences
-- Missing value analysis
-- DataFrame exploration using `info()`, `head()`, `describe()`, and `value_counts()`
+![Missing Values](images/missing_values.png)
 
 ---
 
-## 💡 Key Insights
+## 📸 Python Usage Analysis
 
-This analysis demonstrates how Python and Pandas can be used to transform raw survey data into meaningful insights by:
-
-- Exploring large real-world datasets
-- Identifying developer technology trends
-- Measuring Python adoption among developers
-- Investigating developer learning preferences
-- Cleaning and preparing data for analysis
+![Python Usage](images/python_usage_analysis.png)
 
 ---
 
-## 🎯 Key Skills Demonstrated
+## 📸 Learning Resources Analysis
 
-- Python
-- Pandas
-- NumPy
-- Jupyter Notebook
-- Exploratory Data Analysis (EDA)
-- Data Cleaning
-- Missing Value Handling
-- Data Transformation
-- Data Aggregation
-- Statistical Analysis
-- Filtering & Indexing
-- GroupBy Operations
-- Value Counts
-- Descriptive Statistics
+![Learning Resources](images/learning_resources_analysis.png)
 
 ---
 
-## 📁 Notebook
+## 📸 Education Analysis
 
-The complete Jupyter Notebook is included in this repository:
+![Education Analysis](images/education_analysis.png)
+
+---
+
+## 📓 Notebook
+
+The complete analysis is available in:
 
 ```text
 notebook/stackoverflow_survey_analysis.ipynb
@@ -135,8 +87,20 @@ notebook/stackoverflow_survey_analysis.ipynb
 
 ---
 
-## 👩‍💻 Author
+## 📊 Dataset
 
-**Gizem Kocaöz Acar**
+The original dataset is not included in this repository because of GitHub file size limitations.
 
-Junior Data Analyst Portfolio
+It can be downloaded from the official Stack Overflow Developer Survey repository.
+
+---
+
+## 💡 Skills Demonstrated
+
+- Data Exploration
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Descriptive Statistics
+- Data Filtering
+- Data Aggregation
+- Pandas Data Manipulation
