@@ -8,16 +8,19 @@ including user sessions, traffic source information, and device details.
 */
 
 SELECT
-  DATE(TIMESTAMP_MICROS(event_timestamp)) AS event_date,
+  event_timestamp,
+  user_pseudo_id,
+  event_name,
+  geo.country AS country,
+  device.category AS device_category,
+  (
+    SELECT value.int_value
+    FROM UNNEST(event_params)
+    WHERE key = 'ga_session_id'
+  ) AS session_id,
   (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'source') AS source,
   (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'medium') AS medium,
-  (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'campaign') AS campaign,
-  COUNT(DISTINCT CONCAT(user_pseudo_id, 
-    CAST((SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_id') AS STRING))
-  ) AS user_sessions_count,
-  SUM(CASE WHEN event_name = 'add_to_cart' THEN 1 ELSE 0 END) AS visit_to_cart,
-  SUM(CASE WHEN event_name = 'begin_checkout' THEN 1 ELSE 0 END) AS visit_to_checkout,
-  SUM(CASE WHEN event_name = 'purchase' THEN 1 ELSE 0 END) AS visit_to_purchase
+  (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'campaign') AS campaign
 FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_20210131`
 WHERE event_name IN UNNEST([
   'session_start',
@@ -29,6 +32,4 @@ WHERE event_name IN UNNEST([
   'purchase'
 ])
 AND EXTRACT(YEAR FROM TIMESTAMP_MICROS(event_timestamp)) = 2021
-GROUP BY event_date, source, medium, campaign
-ORDER BY event_date, source, medium, campaign
-LIMIT 50
+LIMIT 20
