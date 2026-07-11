@@ -1,6 +1,6 @@
-# GA4 E-commerce Funnel Analysis
+# 📊 GA4 E-commerce Funnel Analysis
 
-## Project Overview
+## 📖 Project Overview
 
 This project analyzes the Google Analytics 4 (GA4) Sample E-commerce dataset using BigQuery.
 
@@ -8,7 +8,7 @@ The objective is to explore user behavior throughout the e-commerce funnel by ex
 
 ---
 
-## Technologies
+## 🛠 Technologies
 
 - BigQuery
 - SQL (Google Standard SQL)
@@ -16,7 +16,7 @@ The objective is to explore user behavior throughout the e-commerce funnel by ex
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 ga4-ecommerce-funnel-analysis/
@@ -32,9 +32,9 @@ ga4-ecommerce-funnel-analysis/
 
 ---
 
-## SQL Files
+## 📄 SQL Files
 
-### 01_extract_events.sql
+### 📌 01_extract_events.sql
 
 Extracts event-level data from the GA4 Sample E-commerce dataset, including:
 
@@ -48,7 +48,7 @@ Extracts event-level data from the GA4 Sample E-commerce dataset, including:
 - Medium
 - Campaign
 
-### 02_funnel_analysis.sql
+### 📌 02_funnel_analysis.sql
 
 Builds a conversion funnel by aggregating GA4 events and calculating:
 
@@ -66,7 +66,7 @@ Results are grouped by:
 
 ---
 
-## Query Results
+## 📷 Query Results
 
 ### Event Extraction
 
@@ -84,7 +84,7 @@ This query aggregates GA4 events to measure user sessions and conversion funnel 
 
 ---
 
-## Key Skills Demonstrated
+## 🎯 Key Skills Demonstrated
 
 - Google BigQuery
 - Google Analytics 4 (GA4)
