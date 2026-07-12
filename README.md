@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="banner.png" alt="Data Analytics Portfolio Banner">
+</p>
 # 📊 Data Analytics Portfolio
 
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
