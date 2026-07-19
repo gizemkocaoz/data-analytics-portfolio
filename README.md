@@ -19,12 +19,12 @@ This repository showcases projects completed using **SQL, Python, BigQuery, Tabl
 # 📁 Portfolio Projects
 
 | Project | Description | Tools |
-|---------|-------------|-------|
-| ✅ **Marketing Campaign Performance Analysis** | Marketing performance analysis using SQL and an interactive Looker Studio dashboard. | PostgreSQL • SQL • Looker Studio |
-| ✅ **GA4 E-commerce Funnel Analysis** | Funnel and traffic source analysis using the Google Analytics 4 sample dataset in BigQuery. | BigQuery • SQL • GA4 |
-| ✅ **SaaS Revenue & Cohort Analysis Dashboard** | Interactive Tableau dashboards for subscription revenue, MRR, ARPPU, and cohort analysis. | Tableau |
-| ✅ **Python Data Analysis & Visualization** | Exploratory data analysis (EDA) on the Stack Overflow Developer Survey using Python and Pandas. | Python • Pandas • Jupyter Notebook |
-
+|---|---|---|
+| [✅ Marketing Campaign Performance Analysis](marketing-campaign-performance-analysis) | Marketing performance analysis using SQL and an interactive Looker Studio dashboard. | PostgreSQL · SQL · Looker Studio |
+| [✅ GA4 E-commerce Funnel Analysis](ga4-ecommerce-funnel-analysis) | Funnel and traffic source analysis using the Google Analytics 4 sample dataset in BigQuery. | BigQuery · SQL · GA4 |
+| [✅ SaaS Revenue & Cohort Analysis Dashboard](saas-revenue-cohort-analysis-dashboard) | Interactive Tableau dashboards for subscription revenue, MRR, ARPPU, and cohort analysis. | Tableau |
+| [✅ User Funnel Conversion Analysis](user-funnel-conversion-analysis) | Interactive Tableau dashboard analyzing user conversion from registration to first payment. | Tableau · Funnel Analysis · Data Visualization |
+| [✅ Python Data Analysis & Visualization](python-data-analysis-visualization) | Exploratory data analysis (EDA) on the Stack Overflow Developer Survey using Python and Pandas. | Python · Pandas · Jupyter Notebook |
 ---
 
 # 🛠 Skills Demonstrated
