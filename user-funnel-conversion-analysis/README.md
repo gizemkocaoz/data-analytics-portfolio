@@ -59,7 +59,7 @@ Understanding where users leave the onboarding journey is essential for improvin
 - Visualizing monthly performance trends
 - Designing an interactive business dashboard
 
-## Author
+## Author 
 
 **Gizem Kocaöz Acar**  
 Junior Data Analyst  
