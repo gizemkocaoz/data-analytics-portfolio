@@ -1,65 +1,117 @@
-<p align="center">
-  <img src="banner.png" alt="Data Analytics Portfolio Banner">
-</p>
-# 📊 Data Analytics Portfolio
+# Subscription Paywall A/B Test Analysis
 
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![BigQuery](https://img.shields.io/badge/Google%20BigQuery-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Looker Studio](https://img.shields.io/badge/Looker%20Studio-4285F4?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-Statistical%20Testing-8CAAE6?logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
 
-Welcome to my Data Analytics Portfolio.
+## Project Overview
 
-This repository showcases projects completed using **SQL, Python, BigQuery, Tableau, Looker Studio, and Power BI**. Each project focuses on solving real-world business problems through data cleaning, analysis, visualization, and business intelligence techniques.
+This project evaluates whether presenting a **$4.99 weekly premium subscription as a “50% discount”** improves purchase conversion compared with the standard subscription screen.
 
----
+The analysis covers the full experimentation workflow: data validation, test-period review, conversion analysis, statistical hypothesis testing, confidence intervals, effect-size measurement, time-trend analysis, and a business recommendation.
 
-# 📁 Portfolio Projects
+### Test Groups
 
-| Project | Description | Tools |
-|---|---|---|
-| [✅ Marketing Campaign Performance Analysis](marketing-campaign-performance-analysis) | Marketing performance analysis using SQL and an interactive Looker Studio dashboard. | PostgreSQL · SQL · Looker Studio |
-| [✅ GA4 E-commerce Funnel Analysis](ga4-ecommerce-funnel-analysis) | Funnel and traffic source analysis using the Google Analytics 4 sample dataset in BigQuery. | BigQuery · SQL · GA4 |
-| [✅ SaaS Revenue & Cohort Analysis Dashboard](saas-revenue-cohort-analysis-dashboard) | Interactive Tableau dashboards for subscription revenue, MRR, ARPPU, and cohort analysis. | Tableau |
-| [✅ User Funnel Conversion Analysis](user-funnel-conversion-analysis) | Interactive Tableau dashboard analyzing user conversion from registration to first payment. | Tableau · Funnel Analysis · Data Visualization |
-| [✅ Python Data Analysis & Visualization](python-data-analysis-visualization) | Exploratory data analysis (EDA) on the Stack Overflow Developer Survey using Python and Pandas. | Python · Pandas · Jupyter Notebook |
----
+- **Group A — Control:** Standard $4.99 subscription offer
+- **Group B — Variant:** The same $4.99 offer presented as a 50% discounted offer
 
-# 🛠 Skills Demonstrated
+### Business Question
 
-- SQL Query Development
-- Python Data Analysis
-- Exploratory Data Analysis (EDA)
-- Data Cleaning
-- Data Visualization
-- Dashboard Development
-- Business Intelligence
-- Marketing Analytics
-- Web Analytics
-- SaaS Analytics
-- Cohort Analysis
-- Funnel Analysis
-- Google BigQuery
-- Tableau
-- Looker Studio
-- Power BI
+Does the discount-framed paywall generate a statistically and commercially meaningful increase in subscription conversion?
+
+## Technologies
+
+- Python
 - Pandas
+- SciPy / Statsmodels methodology
+- Matplotlib
 - Jupyter Notebook
+- Two-proportion z-test
+- Confidence interval analysis
 
----
+## Project Structure
 
-# 🚀 Upcoming Projects
+```text
+subscription-paywall-ab-test-analysis/
+├── README.md
+├── data/
+│   └── ab_test_data.csv
+├── images/
+│   ├── conversion_rates_ci.png
+│   └── daily_conversion_trend.png
+├── notebooks/
+│   └── ab_test_conversion_analysis.ipynb
+└── report/
+    └── subscription_paywall_ab_test_report.pdf
+```
 
-- 📊 Power BI Sales Dashboard
-- 📈 Customer Segmentation Analysis
-- 🤖 Machine Learning Projects
+## Analysis
 
----
+### Dataset Validation
 
-# 👩‍💻 About Me
+- **19,998** unique users
+- No missing values
+- No duplicated user IDs
+- Test period: **July 3–25, 2023**
+- Test duration: **23 calendar days**
 
-I'm a Junior Data Analyst passionate about transforming data into meaningful business insights through analytics, visualization, and storytelling.
+### Conversion Results
 
-This portfolio reflects my continuous learning journey and hands-on projects completed using modern analytics tools and real-world datasets.
+| Group | Users | Conversions | Conversion Rate | 95% Confidence Interval |
+|---|---:|---:|---:|---:|
+| A — Control | 10,013 | 611 | 6.10% | 5.63%–6.57% |
+| B — Variant | 9,985 | 889 | 8.90% | 8.34%–9.46% |
+
+### Effect Size
+
+- **Absolute lift:** +2.80 percentage points
+- **Relative lift:** +45.91%
+- The observed lift exceeded the predefined **+2 percentage-point minimum detectable effect**.
+
+### Statistical Test
+
+A **one-sided two-proportion z-test** was used because the predefined alternative hypothesis expected the variant to outperform the control.
+
+- **H₀:** The conversion rate of Group B is not higher than Group A.
+- **H₁:** The conversion rate of Group B is higher than Group A.
+- **Z-statistic:** 7.52
+- **P-value:** 2.75 × 10⁻¹⁴
+- **Decision:** Reject H₀ at α = 0.05.
+
+The variant produced a statistically significant increase in conversion.
+
+## Visualizations
+
+### Conversion Rates with 95% Confidence Intervals
+
+![Conversion rates with confidence intervals](images/conversion_rates_ci.png)
+
+### Daily Conversion Trend
+
+![Daily conversion trend](images/daily_conversion_trend.png)
+
+The time-trend visualization includes only the **21 complete calendar days** from July 4 to July 24. Partial boundary days were excluded from this chart to avoid misleading volatility, while all 19,998 users remained included in the primary hypothesis test.
+
+## Business Recommendation
+
+The B variant should be rolled out gradually. It increased conversion from **6.10% to 8.90%**, delivering both a statistically significant result and a commercially meaningful improvement.
+
+During rollout, the product team should continue monitoring conversion and add guardrail metrics such as refund/cancellation rate, revenue per paywall view, retention, and support complaints in a real production environment.
+
+## Skills Demonstrated
+
+- A/B test design and evaluation
+- Data validation and aggregation with Pandas
+- Conversion-rate and lift calculation
+- Statistical hypothesis testing
+- Confidence interval estimation
+- Time-series visualization
+- Data-quality assessment
+- Translating statistical results into a product decision
+
+## Author
+
+**Gizem Kocaöz Acar**  
+[GitHub Portfolio](https://github.com/gizemkocaoz/data-analytics-portfolio)
