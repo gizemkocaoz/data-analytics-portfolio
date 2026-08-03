@@ -86,11 +86,11 @@ The variant produced a statistically significant increase in conversion.
 
 ### Conversion Rates with 95% Confidence Intervals
 
-![Conversion rates with confidence intervals](images/conversion_rates_ci.png)
+![Conversion rates with confidence intervals](conversion_rates_ci.png)
 
 ### Daily Conversion Trend
 
-![Daily conversion trend](images/daily_conversion_trend.png)
+![Daily conversion trend](daily_conversion_trend.png)
 
 The time-trend visualization includes only the **21 complete calendar days** from July 4 to July 24. Partial boundary days were excluded from this chart to avoid misleading volatility, while all 19,998 users remained included in the primary hypothesis test.
 
