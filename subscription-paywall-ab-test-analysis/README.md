@@ -36,15 +36,11 @@ Does the discount-framed paywall generate a statistically and commercially meani
 ```text
 subscription-paywall-ab-test-analysis/
 ├── README.md
-├── data/
-│   └── ab_test_data.csv
-├── images/
-│   ├── conversion_rates_ci.png
-│   └── daily_conversion_trend.png
-├── notebooks/
-│   └── ab_test_conversion_analysis.ipynb
-└── report/
-    └── subscription_paywall_ab_test_report.pdf
+├── ab_test_data.csv
+├── ab_test_conversion_analysis.ipynb
+├── conversion_rates_ci.png
+├── daily_conversion_trend.png
+└── subscription_paywall_ab_test_report.pdf
 ```
 
 ## Analysis
